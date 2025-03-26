@@ -1,89 +1,5 @@
-<a href="https://pdf-lib.js.org">
-<h1 align="center">
-<img alt="pdf-lib" height="300" src="https://raw.githubusercontent.com/Hopding/pdf-lib-docs/master/assets/logo-full.svg?sanitize=true">
-</h1>
-</a>
-
-<div align="center">
-  <strong>Create and modify PDF documents in any JavaScript environment.</strong>
-</div>
-<div align="center">
-  Designed to work in any modern JavaScript runtime. Tested in Node, Browser, Deno, and React Native environments.
-</div>
-
-<br />
-
-<div align="center">
-  <!-- NPM Version -->
-  <a href="https://www.npmjs.com/package/pdf-lib">
-    <img
-      src="https://img.shields.io/npm/v/pdf-lib.svg?style=flat-square"
-      alt="NPM Version"
-    />
-  </a>
-  <!-- Build Status -->
-  <a href="https://circleci.com/gh/Hopding/pdf-lib">
-    <img
-      src="https://img.shields.io/circleci/project/github/Hopding/pdf-lib/master.svg?style=flat-square&label=CircleCI"
-      alt="CircleCI Build Status"
-    />
-  </a>
-  <!-- Prettier Badge -->
-  <a href="https://prettier.io/">
-    <img
-      src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square"
-      alt="Prettier Badge"
-    />
-  </a>
-  <!-- Discord Badge -->
-  <a href="https://discord.gg/Y7uuVMc">
-    <img
-      src="https://img.shields.io/static/v1?label=discord&message=pdf-lib&color=566fbb&style=flat-square"
-      alt="Discord Badge"
-    />
-  </a>
-</div>
-
-<br />
-
-> **Learn more at [pdf-lib.js.org](https://pdf-lib.js.org)**
-
-## Table of Contents
-
-- [Features](#features)
-- [Motivation](#motivation)
-- [Usage Examples](#usage-examples)
-  - [Create Document](#create-document)
-  - [Modify Document](#modify-document)
-  - [Create Form](#create-form)
-  - [Fill Form](#fill-form)
-  - [Flatten Form](#flatten-form)
-  - [Copy Pages](#copy-pages)
-  - [Embed PNG and JPEG Images](#embed-png-and-jpeg-images)
-  - [Embed PDF Pages](#embed-pdf-pages)
-  - [Embed Font and Measure Text](#embed-font-and-measure-text)
-  - [Add Attachments](#add-attachments)
-  - [Set Document Metadata](#set-document-metadata)
-  - [Read Document Metadata](#read-document-metadata)
-  - [Set Viewer Preferences](#set-viewer-preferences)
-  - [Read Viewer Preferences](#read-viewer-preferences)
-  - [Draw SVG Paths](#draw-svg-paths)
-- [Deno Usage](#deno-usage)
-- [Complete Examples](#complete-examples)
-- [Installation](#installation)
-- [Documentation](#documentation)
-- [Fonts and Unicode](#fonts-and-unicode)
-- [Creating and Filling Forms](#creating-and-filling-forms)
-- [Limitations](#limitations)
-- [Help and Discussion](#help-and-discussion)
-- [Encryption Handling](#encryption-handling)
-- [Migrating to v1.0.0](docs/MIGRATION.md)
-- [Contributing](#contributing)
-- [Maintainership](#maintainership)
-- [Tutorials and Cool Stuff](#tutorials-and-cool-stuff)
-- [Prior Art](#prior-art)
-- [Git History Rewrite](#git-history-rewrite)
-- [License](#license)
+* goal
+  * create & modify PDF documents | ANY MODERN JavaScript runtime (Node, browser, Deno & React Native environments)
 
 ## Features
 
@@ -109,19 +25,14 @@
 - Read viewer preferences
 - Add attachments
 
-## Motivation
+## Goal
 
-`pdf-lib` was created to address the JavaScript ecosystem's lack of robust support for PDF manipulation (especially for PDF _modification_).
-
-Two of `pdf-lib`'s distinguishing features are:
-
-1. Supporting modification (editing) of existing documents.
-2. Working in all JavaScript environments - not just in Node or the Browser.
-
-There are [other](#prior-art) good open source JavaScript PDF libraries available. However, most of them can only _create_ documents, they cannot _modify_ existing ones. And many of them only work in particular environments.
+* modify EXISTING documents
+* work | ALL JS environments (NOT ONLY Node or the Browser)
+  * Reason:🧠JavaScript ecosystem's -- lack of -- robust support for PDF manipulation 🧠
 
 ## Usage Examples
-
+* TODO: Migrate to real examples or where to find them 
 ### Create Document
 
 _This example produces [this PDF](assets/pdfs/examples/create_document.pdf)._
@@ -1004,10 +915,12 @@ const pdfBytes = await pdfDoc.save()
 //   • Rendered in an <iframe>
 ```
 
-## Deno Usage
+## Deno
 
-`pdf-lib` fully supports the exciting new [Deno](https://deno.land/) runtime! All of the [usage examples](#usage-examples) work in Deno. The only thing you need to do is change the imports for `pdf-lib` and `@pdf-lib/fontkit` to use the [Skypack](https://www.skypack.dev/) CDN, because Deno requires all modules to be referenced via URLs.
-
+* `pdf-lib` FULLY supports the exciting new [Deno](https://deno.land/) runtime! 
+All of the [usage examples](#usage-examples) work in Deno. 
+The only thing you need to do is change the imports for `pdf-lib` and `@pdf-lib/fontkit` to use the [Skypack](https://www.skypack.dev/) CDN, because Deno requires all modules to be referenced via URLs.
+* 
 > **See also [How to Create and Modify PDF Files in Deno With pdf-lib](https://medium.com/swlh/how-to-create-and-modify-pdf-files-in-deno-ffaad7099b0?source=friends_link&sk=3da183bb776d059df428eaea52102f19)**
 
 ### Creating a Document with Deno
@@ -1107,7 +1020,9 @@ The resulting `out.pdf` file will look like [this PDF](assets/pdfs/examples/embe
 
 ## Complete Examples
 
-The [usage examples](#usage-examples) provide code that is brief and to the point, demonstrating the different features of `pdf-lib`. You can find complete working examples in the [`apps/`](apps/) directory. These apps are used to do manual testing of `pdf-lib` before every release (in addition to the [automated tests](tests/)).
+The [usage examples](#usage-examples) provide code that is brief and to the point, demonstrating the different features of `pdf-lib`. 
+You can find complete working examples in the [`apps/`](apps/) directory. 
+These apps are used to do manual testing of `pdf-lib` before every release (in addition to the [automated tests](tests/)).
 
 There are currently four apps:
 
